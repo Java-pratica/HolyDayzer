@@ -2,6 +2,7 @@ public class App {
     public static void main(String[] args) {
 
         String date = "08/06/2023";
+        boolean allHolidays = false;
         
         String[] holidays = new String[] {"01/01/2023 => Confraternização mundial",
         "21/02/2023 => Carnaval",
@@ -16,7 +17,13 @@ public class App {
         "25/12/2023 => Natal"};
 
         validate validate = new validate();
-        
         validate.validateDate(date, holidays);
+
+
+        for(int i=0;i<holidays.length; i++){
+            if(allHolidays){
+                System.out.println(holidays[i]);
+            }
+        }
     }
 }
